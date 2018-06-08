@@ -5,6 +5,7 @@ class AddItem extends Component {
     constructor(props) {
         super(props);
         this.state = {value : ''};
+        this.addItemService = new ItemService();
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,10 +16,10 @@ class AddItem extends Component {
     }
 
     handleSubmit(event) {
-        console.log(this.state.value);
+        console.log("In react ", this.state.value);
         event.preventDefault();
         this.addItemService.sendData(this.state.value);
-        this.props.history.push('/');
+        //this.props.history.push('/');
     }
     render() {
         return (
