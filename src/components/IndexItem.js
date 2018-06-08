@@ -14,7 +14,7 @@ class IndexItem extends Component {
     componentDidMount() {
         axios.get('http://localhost:4200/items')
         .then(response => {
-            this.setState({item: response.data});
+            this.setState({items: response.data});
         })
         .catch(function(error) {
             console.log(error);
@@ -31,7 +31,7 @@ class IndexItem extends Component {
 
     render() {
         return (
-            div className="container">
+            <div className="container">
             <table className="table table-striped">
               <thead>
                 <tr>
