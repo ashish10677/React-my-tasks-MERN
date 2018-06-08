@@ -10,6 +10,7 @@ ReactDOM.render(
         <div>
             <Route exact path='/' component={App} />
             <Route path='/add-item' component={AddItem} />
+            <Route path='/index' component={IndexItem} />
         </div>
     </Router>,
     document.getElementById('root')
