@@ -19,7 +19,7 @@ class AddItem extends Component {
         console.log("In react ", this.state.value);
         event.preventDefault();
         this.addItemService.sendData(this.state.value);
-        //this.props.history.push('/');
+        this.props.history.push('/');
     }
     render() {
         return (
